@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_home"
+    android:background="@drawable/bg_app"
     >
 
    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -13,6 +13,7 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:layout_above="@+id/line"
+       android:background="@null"
        android:fitsSystemWindows="true">
 
       <com.google.android.material.appbar.AppBarLayout
@@ -49,7 +50,7 @@
                    android:text="@string/day"
                    android:textStyle="bold"
                    android:id="@+id/tvTitle"
-                   android:textColor="@color/white"
+                   android:textColor="@color/blue_dark"
                    android:textSize="@dimen/text_size_24"
                    />
                <TextView
@@ -59,7 +60,7 @@
                    android:layout_centerVertical="true"
                    android:text="@string/exercises"
                    android:textStyle="bold"
-                   android:textColor="@color/white"
+                   android:textColor="@color/blue_white"
                    android:textSize="@dimen/text_size_20"
                    />
                <TextView
@@ -71,7 +72,8 @@
                    android:layout_marginLeft="@dimen/dimen5dp"
                    android:text="(23)"
                    android:id="@+id/tvTotalExercise"
-                   android:textColor="@color/gray_dark"
+                   android:textColor="@color/blue_white"
+                   android:textStyle="bold"
                    android:textSize="@dimen/text_size_20"
                    />
             </RelativeLayout>

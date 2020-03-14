@@ -56,6 +56,8 @@
            android:gravity="center"
            android:textColor="@color/blue_dark"
            android:background="@drawable/bg_button_start"
+           android:paddingTop="@dimen/dimen2dp"
+           android:paddingBottom="@dimen/dimen2dp"
            android:paddingLeft="@dimen/dimen15dp"
            android:paddingRight="@dimen/dimen15dp"
            android:layout_marginRight="@dimen/dimen10dp"

@@ -78,7 +78,7 @@ class VideoAnimationActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitialize
         llTitle.setOnClickListener {
             if (!isAnimation) {
                 tvTitle.text = getString(R.string.animation)
-                Glide.with(this!!).load(R.drawable.ic_animation1).into(ivTitle)
+                Glide.with(this!!).load(R.drawable.ic_animation).into(ivTitle)
                 youtube_player.visibility = View.GONE
                 mplayer?.pause()
                 ivAnimation.visibility = View.VISIBLE

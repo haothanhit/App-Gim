@@ -15,7 +15,7 @@
             <item android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp">
                 <shape android:shape="rectangle">
                     <corners android:radius="15dp" />
-                    <solid android:color="@color/gray_white" />
+                    <solid android:color="@null" />
                 </shape>
             </item>
 
@@ -35,7 +35,7 @@
             <item android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp">
                 <shape android:shape="rectangle">
                     <corners android:radius="15dp" />
-                    <solid android:color="@color/gray_white" />
+                    <solid android:color="@null" />
                 </shape>
             </item>
 
@@ -55,7 +55,7 @@
             <item android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp">
                 <shape android:shape="rectangle">
                     <corners android:radius="15dp" />
-                    <solid android:color="@color/gray" />
+                    <solid android:color="@color/gray_white" />
                 </shape>
             </item>
 

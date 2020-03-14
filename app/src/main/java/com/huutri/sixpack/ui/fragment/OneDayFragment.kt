@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -160,7 +161,7 @@ class OneDayFragment : BaseFragment() {
             tvTitleDialog.text = arrExercise_Move?.listMove?.get(pos)?.NAME_MOVE
             val tvTDetailialog = dialog!!.findViewById(R.id.tvTDetailialog) as TextView
             tvTDetailialog.text = arrExercise_Move?.listMove?.get(pos)?.DESCRIPTION_MOVE
-            val tvCloseDialog = dialog!!.findViewById(R.id.tvCloseDialog) as TextView
+            val tvCloseDialog = dialog!!.findViewById(R.id.tvCloseDialog) as Button
 
             tvCloseDialog.setOnClickListener {
                 dialog!!.dismiss()
@@ -178,7 +179,7 @@ class OneDayFragment : BaseFragment() {
             } catch (ex: Exception) {
                 Glide.with(context!!).load(R.drawable.ic_dead_bug).into(ivDialog)
             }
-            val iv_Video = dialog!!.findViewById(R.id.iv_Video) as CardView
+            val iv_Video = dialog!!.findViewById(R.id.iv_Video) as ImageView
 
             iv_Video.setOnClickListener {
                 try {

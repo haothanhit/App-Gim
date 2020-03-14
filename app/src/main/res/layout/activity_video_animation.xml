@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="@drawable/bg_preview"
+    android:background="@drawable/bg_app"
 
     >
 
@@ -35,7 +35,7 @@
                    android:id="@+id/ivTitle"
                    android:layout_centerVertical="true"
                    android:layout_width="@dimen/dimen35dp"
-                   android:layout_height="@dimen/dimen25dp"
+                   android:layout_height="@dimen/dimen30dp"
                    android:src="@drawable/ic_video"
                    android:scaleType="fitXY"
                    />
@@ -47,7 +47,7 @@
                    android:textAllCaps="true"
                    android:textStyle="bold"
                    android:id="@+id/tvTitle"
-                   android:textColor="@color/white"
+                   android:textColor="@color/blue_white"
                    android:textSize="@dimen/text_size_22"
                    />
            </LinearLayout>
@@ -63,10 +63,14 @@
             android:layout_height="@dimen/dimen250dp"
             android:layout_marginLeft="@dimen/dimen10dp"
             android:layout_marginRight="@dimen/dimen10dp"
+            android:scaleType="fitXY"
             android:id="@+id/ivAnimation"
             android:visibility="gone"
             />
         <TextView
+            android:layout_marginLeft="@dimen/dimen10dp"
+            android:layout_marginRight="@dimen/dimen10dp"
+            android:layout_marginTop="@dimen/dimen10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size_20"
@@ -75,6 +79,8 @@
             android:textStyle="bold"
             />
         <TextView
+            android:layout_marginLeft="@dimen/dimen10dp"
+            android:layout_marginRight="@dimen/dimen10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size_16"

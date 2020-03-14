@@ -45,5 +45,6 @@
     <string name="in">IN</string>
     <string name="save">save</string>
     <string name="cancel">cancel</string>
+    <string name="plus_time">+20s</string>
 
 </resources>

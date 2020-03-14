@@ -9,34 +9,39 @@
      android:layout_height="@dimen/dimen170dp"
      android:background="@drawable/bg_card_member"
      >
-     <ImageView
-         android:id="@+id/ivDialog"
-         android:layout_width="@dimen/dimen150dp"
-         android:layout_height="@dimen/dimen150dp"
-         android:layout_centerInParent="true"
+     <androidx.cardview.widget.CardView
+         android:layout_centerVertical="true"
          android:layout_marginTop="@dimen/dimen5dp"
          android:layout_marginBottom="@dimen/dimen5dp"
-         android:src="@drawable/ic_plank"
-         />
-     <androidx.cardview.widget.CardView
-         android:id="@+id/iv_Video"
-         app:cardCornerRadius="@dimen/dimen15dp"
-         android:layout_width="@dimen/dimen45dp"
-         android:layout_height="@dimen/dimen45dp"
-         android:layout_alignParentTop="true"
+         android:layout_marginLeft="@dimen/dimen20dp"
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/dimen150dp"
          android:background="@null"
-         android:layout_marginTop="@dimen/dimen15dp"
-         android:layout_marginRight="@dimen/dimen15dp"
-         android:layout_alignParentRight="true">
+         app:cardCornerRadius="@dimen/dimen5dp"
+         android:layout_toLeftOf="@+id/iv_Video"
+         android:layout_marginRight="@dimen/dimen20dp">
          <ImageView
-             android:background="@drawable/bg_btn_video"
+             android:id="@+id/ivDialog"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:src="@drawable/ic_video"
-             android:layout_gravity="center"
-             android:padding="@dimen/dimen5dp"
-              />
+             android:scaleType="fitXY"
+             android:src="@drawable/ic_plank"
+             />
      </androidx.cardview.widget.CardView>
+
+
+         <ImageView
+             android:layout_width="@dimen/dimen45dp"
+             android:layout_height="@dimen/dimen45dp"
+             android:layout_alignParentTop="true"
+             android:layout_marginTop="@dimen/dimen15dp"
+             android:layout_marginRight="@dimen/dimen15dp"
+             android:layout_alignParentRight="true"
+             android:id="@+id/iv_Video"
+             android:src="@drawable/bg_btn_state_video"
+             android:layout_gravity="center"
+              />
+
 
 
  </RelativeLayout>
@@ -67,14 +72,20 @@
 
         </LinearLayout>
     </ScrollView>
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="textEnd"
-        android:text="@string/close"
-        android:id="@+id/tvCloseDialog"
-        android:layout_margin="@dimen/dimen10dp"
-        android:textColor="@color/blue_dark"
-        android:textSize="@dimen/text_size_18"
-        />
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/close"
+            android:id="@+id/tvCloseDialog"
+            android:background="@null"
+            android:layout_margin="@dimen/dimen10dp"
+            android:textColor="@color/text_btn_close_dialog"
+            android:textSize="@dimen/text_size_18"
+            />
+    </FrameLayout>
+
 </LinearLayout>

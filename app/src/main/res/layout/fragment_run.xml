@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@drawable/bg_preview"
+    android:background="@drawable/bg_app"
     android:layout_height="match_parent">
     <RelativeLayout
         android:id="@+id/rltTop"
@@ -37,18 +37,20 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen200dp"
+        android:layout_height="@dimen/dimen250dp"
         android:layout_below="@+id/stepProgressBar"
-        android:layout_marginTop="@dimen/dimen5dp"
-        android:layout_marginBottom="@dimen/dimen5dp"
+        android:layout_marginTop="@dimen/dimen10dp"
+        android:layout_marginBottom="@dimen/dimen10dp"
         android:id="@+id/rltRun"
         >
-        <ImageView
-            android:id="@+id/ivRun"
-            android:scaleType="fitXY"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_plank" />
+
+            <ImageView
+                android:id="@+id/ivRun"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_plank" />
+
             <ImageView
                 android:id="@+id/iv_Video"
                 android:layout_alignParentTop="true"
@@ -58,7 +60,7 @@
                 android:background="@null"
                 android:layout_width="@dimen/dimen35dp"
                 android:layout_height="@dimen/dimen35dp"
-                android:src="@drawable/ic_infomation"
+                android:src="@drawable/bg_btn_state_info"
                 />
     </RelativeLayout>
 
@@ -89,12 +91,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
  <LinearLayout
+     android:layout_marginTop="@dimen/dimen10dp"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:gravity="center"
      android:orientation="horizontal">
      <TextView
-         android:layout_marginTop="@dimen/dimen5dp"
          android:textColor="@color/blue_dark"
          android:textSize="@dimen/text_size_28"
          android:id="@+id/tvTime"
@@ -102,20 +104,24 @@
          android:text="X23"
          android:gravity="center"
          android:textAlignment="center"
+         android:paddingLeft="@dimen/dimen5dp"
+         android:paddingRight="@dimen/dimen5dp"
          android:layout_width="wrap_content"
+         android:layout_marginRight="@dimen/dimen15dp"
          android:layout_height="wrap_content"/>
      <TextView
          android:gravity="center_vertical"
-         android:layout_marginLeft="@dimen/dimen25dp"
+         android:paddingTop="@dimen/dimen2dp"
+         android:paddingBottom="@dimen/dimen2dp"
+         android:layout_marginLeft="@dimen/dimen15dp"
          android:background="@drawable/bg_btn_restart"
-         android:layout_marginTop="@dimen/dimen5dp"
          android:textColor="@color/blue_dark"
-         android:paddingLeft="@dimen/dimen10dp"
-         android:paddingRight="@dimen/dimen10dp"
+         android:paddingLeft="@dimen/dimen15dp"
+         android:paddingRight="@dimen/dimen15dp"
          android:textSize="@dimen/text_size_20"
          android:id="@+id/tvTimeIncease"
          android:textStyle="bold"
-         android:text="+20s"
+         android:text="@string/plus_time"
          android:textAlignment="center"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"/>

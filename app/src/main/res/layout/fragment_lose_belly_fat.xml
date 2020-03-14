@@ -13,7 +13,7 @@
         android:layout_marginTop="@dimen/dimen5dp"
         android:layout_marginBottom="@dimen/dimen15dp"
         android:background="@null"
-        app:cardCornerRadius="8dp"
+        app:cardCornerRadius="@dimen/dimen8dp"
         >
         <ImageView
             android:scaleType="fitXY"
