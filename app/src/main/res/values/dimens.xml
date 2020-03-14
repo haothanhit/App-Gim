@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_25">25sp</dimen>
+    <dimen name="text_size_26">26sp</dimen>
+    <dimen name="text_size_28">28sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="image_arc_button">30dp</dimen>
+    <dimen name="margin2">2dp</dimen>
+    <dimen name="margin_small">5dp</dimen>
+    <dimen name="margin_large">10dp</dimen>
+    <dimen name="margin_big">15dp</dimen>
+    <dimen name="padding2">2dp</dimen>
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_large">10dp</dimen>
+    <dimen name="padding_big">15dp</dimen>
+    <dimen name="margin_bottom_arc_button">25dp</dimen>
+    <dimen name="margin_bottom_arc_negative_button">-15dp</dimen>
+    <dimen name="width_image_home">300dp</dimen>
+    <dimen name="height_image_home">300dp</dimen>
+    <dimen name="margin_top_image_home">130dp</dimen>
+    <dimen name="height_image_citizen">220dp</dimen>
+    <dimen name="margin_top_image_preview">170dp</dimen>
+    <dimen name="height_card_id">500dp</dimen>
+    <dimen name="width_image_logo">100dp</dimen>
+    <dimen name="height_image_logo">100dp</dimen>
+    <dimen name="margin_bottom_ll_home">50dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="height_tab_layout">150dp</dimen>
+    <dimen name="width_height_iv_complete">40dp</dimen>
+    <dimen name="height_btn_start">40dp</dimen>
+
+    <dimen name="dimen1dp">1dp</dimen>
+    <dimen name="dimen10dp">10dp</dimen>
+    <dimen name="dimen200dp">200dp</dimen>
+    <dimen name="dimen5dp">5dp</dimen>
+    <dimen name="dimen15dp">15dp</dimen>
+    <dimen name="dimen16dp">16dp</dimen>
+    <dimen name="dimen20dp">20dp</dimen>
+    <dimen name="dimen100dp">100dp</dimen>
+    <dimen name="dimen300dp">300dp</dimen>
+    <dimen name="dimen220dp">220dp</dimen>
+    <dimen name="dimen160dp">160dp</dimen>
+    <dimen name="dimen170dp">170dp</dimen>
+    <dimen name="dimen50dp">50dp</dimen>
+    <dimen name="dimen25dp">25dp</dimen>
+    <dimen name="dimen35dp">35dp</dimen>
+    <dimen name="dimen250dp">250dp</dimen>
+    <dimen name="dimen2dp">2dp</dimen>
+    <dimen name="dimen125dp">125dp</dimen>
+    <dimen name="dimen150dp">150dp</dimen>
+    <dimen name="dimen45dp">45dp</dimen>
+</resources>

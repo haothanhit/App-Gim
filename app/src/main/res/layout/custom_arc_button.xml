@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/rootView"
+
+    >
+        <LinearLayout
+            android:id="@+id/llDistance"
+            android:layout_margin="@dimen/margin_large"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:id="@+id/arc_button_icon"
+                    android:layout_width="@dimen/image_arc_button"
+                    android:layout_height="@dimen/image_arc_button"
+                    android:src="@drawable/ic_app" />
+
+                <TextView
+                    android:padding="@dimen/padding_small"
+                    android:id="@+id/arc_button_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Photo"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_size_16" />
+
+
+        </LinearLayout>
+
+
+
+
+</LinearLayout>

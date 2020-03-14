@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home"
+    >
+
+   <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_above="@+id/line"
+       android:fitsSystemWindows="true">
+
+      <com.google.android.material.appbar.AppBarLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@null"
+
+          >
+
+         <androidx.appcompat.widget.Toolbar
+             android:id="@+id/toolbar"
+             android:layout_width="match_parent"
+             android:layout_height="?attr/actionBarSize"
+             android:background="@null"
+             app:layout_scrollFlags="scroll|enterAlways"
+             >
+            <RelativeLayout
+                android:padding="@dimen/dimen10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+               <ImageView
+                   android:layout_width="@dimen/dimen35dp"
+                   android:layout_height="@dimen/dimen25dp"
+                   android:id="@+id/ivBack"
+                   android:src="@drawable/bg_btn_state_back"
+                   android:layout_centerVertical="true"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@+id/ivBack"
+                   android:layout_centerVertical="true"
+                   android:layout_marginLeft="@dimen/dimen10dp"
+                   android:text="@string/day"
+                   android:textStyle="bold"
+                   android:id="@+id/tvTitle"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/text_size_24"
+                   />
+               <TextView
+                   android:layout_toLeftOf="@+id/tvTotalExercise"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:text="@string/exercises"
+                   android:textStyle="bold"
+                   android:textColor="@color/white"
+                   android:textSize="@dimen/text_size_20"
+                   />
+               <TextView
+                   android:layout_marginRight="@dimen/dimen5dp"
+                   android:layout_alignParentRight="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:layout_marginLeft="@dimen/dimen5dp"
+                   android:text="(23)"
+                   android:id="@+id/tvTotalExercise"
+                   android:textColor="@color/gray_dark"
+                   android:textSize="@dimen/text_size_20"
+                   />
+            </RelativeLayout>
+         </androidx.appcompat.widget.Toolbar>
+
+      </com.google.android.material.appbar.AppBarLayout>
+      <androidx.recyclerview.widget.RecyclerView
+          xmlns:app="http://schemas.android.com/apk/res-auto"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          app:layout_behavior="@string/appbar_scrolling_view_behavior"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/rcvOneDay"
+          />
+
+   </androidx.coordinatorlayout.widget.CoordinatorLayout>
+   <ImageView
+       android:id="@+id/line"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/dimen1dp"
+       android:background="@color/gray_dark"
+       android:layout_above="@+id/llBottomParent"
+       />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:id="@+id/llBottomParent"
+       android:layout_alignParentBottom="true"
+
+       >
+      <FrameLayout
+          android:layout_above="@+id/adView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+         <Button
+             android:id="@+id/btnStart"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="@dimen/dimen10dp"
+             android:background="@drawable/bg_btn_radius_24dp"
+             android:text="@string/start"
+             android:textSize="@dimen/text_size_18"
+             android:textAllCaps="false"
+             android:textColor="@color/white"
+             />
+
+         <LinearLayout
+             android:id="@+id/llProgress"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:visibility="gone"
+             >
+
+            <Button
+                android:id="@+id/btnReStart"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen10dp"
+                android:background="@drawable/bg_btn_restart"
+                android:text="@string/restart"
+                android:textColor="@color/blue_dark"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_18" />
+
+            <LinearLayout
+                android:layout_margin="@dimen/dimen10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/bg_btn_radius_24dp"
+                android:id="@+id/btnContinue"
+                android:gravity="center"
+                android:layout_weight="1">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/continue1"
+                   android:textColor="@color/white"
+                   android:textAllCaps="false"
+                   android:textAlignment="center"
+                   android:textSize="@dimen/text_size_18" />
+               <TextView
+                   android:id="@+id/tvPercentComplete"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/completed"
+                   android:textColor="@color/white"
+                   android:textAllCaps="false"
+                   android:textAlignment="center"
+                   android:textSize="@dimen/text_size_14" />
+
+            </LinearLayout>
+         </LinearLayout>
+      </FrameLayout>
+      <com.google.android.gms.ads.AdView
+          android:visibility="gone"
+          xmlns:ads="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/adView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          ads:adSize="SMART_BANNER"
+          ads:adUnitId="@string/ad_banner_id">
+      </com.google.android.gms.ads.AdView>
+
+   </LinearLayout>
+
+</RelativeLayout>

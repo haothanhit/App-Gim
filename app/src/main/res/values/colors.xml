@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#26266d</color>
+    <color name="colorPrimaryDark">#3B7E99</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="black">#000000</color>
+    <color name="colorButton">#bf39b500</color>
+    <color name="white">#ffffff</color>
+    <color name="green">#09C090</color>
+    <color name="green_center">#39D5AE</color>
+    <color name="green_end">#77F0D1</color>
+    <color name="gray">#818181</color>
+    <color name="blue_white">#6786FA</color>
+    <color name="gray_white">#C9BEBE</color>
+    <color name="gray_dark">#949292</color>
+    <color name="transparent3">#70000000</color>
+    <color name="blue_dark">#0033cc</color>
+    <color name="transparent0">#00000000</color>
+    <color name="windowBackground">#1C1C1C</color>
+    <color name="overlay">#AA1C1C1C</color>
+    <color name="colorAccent1">#5DAC81</color>
+    <color name="black_home">#262626</color>
+    <color name="bg_dialog_deny_permission">#404040</color>
+    <color name="color_main_nav">#1F262E</color>
+    <color name="bottom_navigation_enable">#800040</color>
+    <color name="text_black">#000000</color>
+    <color name="red">#FF0009</color>
+    <color name="each_side">#604020</color>
+    <!--color metcare-->
+    <color name="color_01">#35479C</color>
+    <color name="color_02">#E5569E</color>
+    <color name="color_03">#8E91FD</color>
+    <color name="color_04">#FA96A0</color>
+</resources>

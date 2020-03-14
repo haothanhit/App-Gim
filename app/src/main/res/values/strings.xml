@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Six Pack</string>
+    <string name="training">Training</string>
+    <string name="reports">Reports</string>
+    <string name="six_pack_in_30_days">Six Pack in 30 Days</string>
+    <string name="number_exrcises"> %1$s Exercises</string>
+    <string name="completed">Completed</string>
+    <string name="rest">Rest</string>
+    <string name="close">CLOSE</string>
+    <string name="start">Start</string>
+    <string name="finish">Finish</string>
+    <string name="rest_description">Your body and muscles need to get some rest</string>
+    <string name="share_with_friends">Share with friends</string>
+    <string name="rate_us">Rate us</string>
+    <string name="me">Me</string>
+    <string name="do_it_again">Do it again</string>
+    <string name="video">video</string>
+    <string name="animation">animation</string>
+    <string name="restart">Restart</string>
+    <string name="continue1">Continue</string>
+    <string name="day">Day</string>
+    <string name="exercises">Exercises</string>
+    <string name="feedback">Feedback</string>
+    <string name="feedback_subject">Six Pack in 30 Days Feedback</string>
+    <string name="delete_all_data">Delete all data</string>
+    <string name="each_side">Each Side</string>
+    <!--Id test Ads-->
+    <string name="ad_banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_full_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="ad_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="ad_reward_id">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="ad_native_id">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="rest_day">Rest Day</string>
+    <string name="total">Total</string>
+    <string name="history">History</string>
+    <string name="edit">Edit</string>
+    <string name="workouts">Workouts</string>
+    <string name="kcal">kcal</string>
+    <string name="time">time</string>
+    <string name="current">Current:</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="lb">LB</string>
+    <string name="kg">KG</string>
+    <string name="in">IN</string>
+    <string name="save">save</string>
+    <string name="cancel">cancel</string>
+
+</resources>
