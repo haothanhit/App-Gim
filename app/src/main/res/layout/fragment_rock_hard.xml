@@ -15,12 +15,30 @@
         android:background="@null"
         app:cardCornerRadius="8dp"
         >
-        <ImageView
-            android:scaleType="fitXY"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_tablayout_2"
-            />
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tablayout_2"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rock_hard_abs"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/dimen10dp"
+                android:layout_marginRight="@dimen/dimen10dp"
+                android:textSize="@dimen/text20sp"
+                android:layout_alignParentBottom="true"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/dimen3dp"
+                />
+        </RelativeLayout>
+
     </androidx.cardview.widget.CardView>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcv_Main_RockHard"

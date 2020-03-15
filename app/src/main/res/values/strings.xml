@@ -46,5 +46,8 @@
     <string name="save">save</string>
     <string name="cancel">cancel</string>
     <string name="plus_time">+20s</string>
+    <string name="lose_belly_fat">Lose Belly Fat</string>
+    <string name="rock_hard_abs">Rock Hard Abs</string>
+    <string name="six_pack_abs">Six Pack Abs</string>
 
 </resources>
