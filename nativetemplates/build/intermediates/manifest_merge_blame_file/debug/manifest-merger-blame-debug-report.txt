@@ -6,13 +6,13 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->D:\huutri\AppGim\nativetemplates\src\main\AndroidManifest.xml
+8-->D:\huutri\sixpack\nativetemplates\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="28" />
-9-->D:\huutri\AppGim\nativetemplates\src\main\AndroidManifest.xml
+9-->D:\huutri\sixpack\nativetemplates\src\main\AndroidManifest.xml
 10
 11    <application android:supportsRtl="true" >
-11-->D:\huutri\AppGim\nativetemplates\src\main\AndroidManifest.xml:3:3-5:17
-11-->D:\huutri\AppGim\nativetemplates\src\main\AndroidManifest.xml:3:16-42
+11-->D:\huutri\sixpack\nativetemplates\src\main\AndroidManifest.xml:3:3-5:17
+11-->D:\huutri\sixpack\nativetemplates\src\main\AndroidManifest.xml:3:16-42
 12    </application>
 13
 14</manifest>
