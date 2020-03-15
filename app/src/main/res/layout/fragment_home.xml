@@ -31,8 +31,8 @@
                 android:id="@+id/ivPresent"
                 android:layout_margin="@dimen/margin_small"
                 android:src="@drawable/ic_present"
-                android:layout_width="35dp"
-                android:layout_height="35dp"/>
+                android:layout_width="@dimen/dimen35dp"
+                android:layout_height="@dimen/dimen35dp"/>
             <!--        <ImageView-->
             <!--            android:layout_toLeftOf="@+id/ivPresent"-->
             <!--            android:id="@+id/ivPlan"-->

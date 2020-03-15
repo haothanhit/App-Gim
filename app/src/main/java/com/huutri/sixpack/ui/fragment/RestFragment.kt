@@ -32,7 +32,17 @@ class RestFragment : BaseFragment() {
     }
 
     private fun initView() {
-        ivBack.setOnClickListener{
+        //ads
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+        adView.adListener = object : AdListener() {
+            override fun onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+                adView.visibility = View.VISIBLE
+            }
+        }
+
+        ivBack.setOnClickListener {
             (activity as BaseActivity).onBackPressed()
         }
         btnFinishs.setOnClickListener {
@@ -40,39 +50,9 @@ class RestFragment : BaseFragment() {
             (activity as BaseActivity).onBackPressed()
 
         }
-        //ads
-        val adRequest = AdRequest.Builder().build()
-        adView.loadAd(adRequest)
-        adView.adListener = object: AdListener() {
-            override fun onAdLoaded() {
-                // Code to be executed when an ad finishes loading.
-                adView.visibility=View.VISIBLE
-            }
-
-            override fun onAdFailedToLoad(errorCode : Int) {
-                // Code to be executed when an ad request fails.
-            }
-
-            override fun onAdOpened() {
-                // Code to be executed when an ad opens an overlay that
-                // covers the screen.
-            }
-
-            override fun onAdClicked() {
-                // Code to be executed when the user clicks on an ad.
-            }
-
-            override fun onAdLeftApplication() {
-                // Code to be executed when the user has left the app.
-            }
-
-            override fun onAdClosed() {
-                // Code to be executed when the user is about to return
-                // to the app after tapping on an ad.
-            }
-        }
-
     }
+
+
 
 
 }

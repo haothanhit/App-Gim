@@ -18,8 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="35dp"
-                android:layout_height="25dp"
+                android:layout_width="@dimen/dimen35dp"
+                android:layout_height="@dimen/dimen25dp"
                 android:id="@+id/ivBack"
                 android:src="@drawable/bg_btn_state_back"
                 android:layout_centerVertical="true"

@@ -37,8 +37,9 @@
             android:text="@string/rest_description"
             android:textAlignment="center"
             android:textSize="@dimen/text_size_16"
-            android:layout_below="@+id/ivRest"
+            android:layout_above="@+id/ivLine"
             android:textColor="@color/black"
+            android:layout_marginBottom="@dimen/dimen15dp"
             />
         <ImageView
             android:id="@+id/ivRest"
@@ -49,6 +50,7 @@
             android:background="@null"
             />
         <ImageView
+            android:id="@+id/ivLine"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen1dp"
             android:background="@color/gray_dark"

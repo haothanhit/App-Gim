@@ -59,22 +59,29 @@ class OneDayFragment : BaseFragment() {
 
     @SuppressLint("WrongConstant")
     private fun initView() {
+        val adRequest = AdRequest.Builder().build()        //ads
+        adView.loadAd(adRequest)
+        adView.adListener = object : AdListener() {
+            override fun onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+                adView.visibility = View.VISIBLE
+            }
+        }
         arrExercise_Move = DatabaseAccess.getInstance(context!!).getOneDay
         rcvOneDay.layoutManager = LinearLayoutManager(context, LinearLayout.VERTICAL, false)
         rcvOneDay.adapter = OneDayAdapter(
             { pos: Int -> partItemClicked(pos) })
         rcvOneDay.setHasFixedSize(true)
-        val adRequest = AdRequest.Builder().build()        //ads
-        adView.loadAd(adRequest)
-        rcvOneDay.addOnScrollListener(object : RecyclerView.OnScrollListener() {
 
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                if (dy < 0) { //crolled Upwards
-                    adView.visibility = View.VISIBLE
-                }
-                super.onScrolled(recyclerView, dx, dy)
-            }
-        })
+//        rcvOneDay.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+//
+//            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+//                if (dy < 0) { //crolled Upwards
+//                    adView.visibility = View.VISIBLE
+//                }
+//                super.onScrolled(recyclerView, dx, dy)
+//            }
+//        })
         tvTitle.text = nameDay
         ivBack.setOnClickListener {
 

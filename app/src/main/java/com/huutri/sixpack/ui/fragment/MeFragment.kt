@@ -35,6 +35,10 @@ class MeFragment : BaseFragment() {
     }
 
     private fun initView() {
+        //ads
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+
         btnRateUs.setOnClickListener {
             (activity as BaseActivity).openMyApp()
         }
@@ -47,8 +51,6 @@ class MeFragment : BaseFragment() {
         btnDeleteAllData.setOnClickListener {
             (activity as BaseActivity).deleteAllData()
         }
-        //ads
-        val adRequest = AdRequest.Builder().build()
-        adView.loadAd(adRequest)
+
     }
 }
