@@ -5,10 +5,10 @@
         android:icon="@drawable/ic_bottom_six_pack"
         android:title="@string/training" />
 
-    <item
-        android:id="@+id/navigation_report"
-        android:icon="@drawable/ic_bottom_report"
-        android:title="@string/reports" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_report"-->
+<!--        android:icon="@drawable/ic_bottom_report"-->
+<!--        android:title="@string/reports" />-->
 
     <item
         android:id="@+id/navigation_me"
