@@ -16,6 +16,7 @@ import com.huutri.sixpack.common.data.DatabaseAccess
 import com.huutri.sixpack.common.util.CountDownTimerWithPause
 import com.huutri.sixpack.ui.activity.VideoAnimationActivity
 import kotlinx.android.synthetic.main.fragment_run.*
+import java.lang.String
 import java.text.DecimalFormat
 
 
@@ -73,7 +74,6 @@ class RunFragment : BaseFragment() {
             DatabaseAccess.getInstance(context!!).updateResetALLMotionStart
             posRun = posReal
             setUpPosition()
-
         }
         ivbefore.setOnClickListener {
             var a: Int = posRun - 1
@@ -109,10 +109,10 @@ class RunFragment : BaseFragment() {
 
         }
     }
-
+    private var isTypeXtime:Boolean =false
     private fun setUpPosition() {
         var pos = posRun - posReal
-        try {
+        try {   //load image exercise
             Glide.with(context!!).load(
                 context!!.resources.getIdentifier(
                     OneDayFragment.arrExercise_Move?.listMove?.get(pos)?.LINK_IMAGE_MOVE,
@@ -132,6 +132,7 @@ class RunFragment : BaseFragment() {
         } catch (ex: java.lang.Exception) {
         }
         if (textTime!!.startsWith("x")) {   //if motion type X time
+            isTypeXtime=true
             Glide.with(context!!).load(R.drawable.ic_check_run).into(ivFinish)
             var xMotion = textTime.substring(1, textTime.length).trim()
             if (xMotion.toInt() % 2 == 0) {
@@ -145,6 +146,7 @@ class RunFragment : BaseFragment() {
             }
             tvTimeIncease.visibility = View.GONE
         } else {
+            isTypeXtime=false
             tvEachSide.visibility = View.GONE
             tvTimeIncease.visibility = View.VISIBLE
             tvTimeIncease.setOnClickListener {
@@ -166,14 +168,19 @@ class RunFragment : BaseFragment() {
 
         }
         btnFinishs.setOnClickListener {
-            if (yourCountDownTimer.isPaused) {
-                yourCountDownTimer.resume()
-                Glide.with(context!!).load(R.drawable.ic_resume_run).into(ivFinish)
-            } else {
-                yourCountDownTimer.pause()
-                Glide.with(context!!).load(R.drawable.ic_pause_run).into(ivFinish)
+            if(isTypeXtime){
+                afterClick()  // next exercise
+            }else{
+                if (yourCountDownTimer.isPaused) {
+                    yourCountDownTimer.resume()
+                    Glide.with(context!!).load(R.drawable.ic_resume_run).into(ivFinish)
+                } else {
+                    yourCountDownTimer.pause()
+                    Glide.with(context!!).load(R.drawable.ic_pause_run).into(ivFinish)
 
+                }
             }
+
         }
     }
 
@@ -188,12 +195,19 @@ class RunFragment : BaseFragment() {
                 override fun onTick(millisUntilFinished: Long) {
 
                     val f = DecimalFormat("00")
-//                    val hour = millisUntilFinished / 3600000 % 24
-//                    val min = millisUntilFinished / 60000 % 60
-//                    val sec = millisUntilFinished / 1000 % 60
+                    val hour = millisUntilFinished / 3600000 % 24
+                    val min = millisUntilFinished / 60000 % 60
+                    val sec = millisUntilFinished / 1000 % 60
+                      if(hour.toInt()==0){
+                          tvTime.setText( f.format(min) + ":" + f.format(sec))
+
+                      }else
+                    tvTime.setText(f.format(hour) + ":" + f.format(min) + ":" + f.format(sec))
+//                    val result =
+//                        String.format("%02d:%02d", intTime / 100, intTime % 100)
 //
-//                    cMeter.setText(f.format(hour) + ":" + f.format(min) + ":" + f.format(sec))
-                    tvTime.setText("00:" + f.format(millisUntilFinished / 1000))
+//                    tvTime.setText()
+//                    tvTime.setText("00:" + f.format(millisUntilFinished / 1000))
                     Glide.with(context!!).load(R.drawable.ic_resume_run).into(ivFinish)
                 }
 
