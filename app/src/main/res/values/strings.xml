@@ -25,11 +25,18 @@
     <string name="delete_all_data">Delete all data</string>
     <string name="each_side">Each Side</string>
     <!--Id test Ads-->
-    <string name="ad_banner_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="ad_full_id">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="ad_app_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="ad_reward_id">ca-app-pub-3940256099942544/5224354917</string>
-    <string name="ad_native_id">ca-app-pub-3940256099942544/2247696110</string>
+<!--    <string name="ad_banner_id">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="ad_full_id">ca-app-pub-3940256099942544/1033173712</string>-->
+<!--    <string name="ad_app_id">ca-app-pub-3940256099942544~3347511713</string>-->
+<!--    <string name="ad_reward_id">ca-app-pub-3940256099942544/5224354917</string>-->
+<!--    <string name="ad_native_id">ca-app-pub-3940256099942544/2247696110</string>-->
+
+    <!--Id test Real-->
+    <string name="ad_banner_id">ca-app-pub-4439595704793521/6287314122</string>
+    <string name="ad_full_id">ca-app-pub-4439595704793521/7408824104</string>
+    <string name="ad_app_id">ca-app-pub-4439595704793521~8913477468</string>
+    <string name="ad_reward_id">ca-app-pub-4439595704793521/8338762399</string>
+    <string name="ad_native_id">ca-app-pub-4439595704793521/4733531633</string>
     <string name="rest_day">Rest Day</string>
     <string name="total">Total</string>
     <string name="history">History</string>
