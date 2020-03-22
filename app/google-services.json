@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "438453373680",
+    "firebase_url": "https://six-pack-d0a71.firebaseio.com",
+    "project_id": "six-pack-d0a71",
+    "storage_bucket": "six-pack-d0a71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438453373680:android:5dfce14f64e364ec2d9035",
+        "android_client_info": {
+          "package_name": "com.huutri.sixpack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438453373680-4s5k77u78tb946pctpfgps1kn1lnonak.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.huutri.sixpack",
+            "certificate_hash": "a86bc69d0119939d9991f023c1c253c99bfbed13"
+          }
+        },
+        {
+          "client_id": "438453373680-f2ujkhn6bj9flmtbjogh78tbi7s19ulm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUWHYMjOTMMhduXrarxx6mJWsOFLWsj1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438453373680-f2ujkhn6bj9flmtbjogh78tbi7s19ulm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,17 +2,17 @@ package com.huutri.sixpack.ui.activity
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.bumptech.glide.Glide
-import com.google.android.gms.ads.AdRequest
 import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
+import com.google.firebase.database.*
 import com.huutri.sixpack.R
+import com.huutri.sixpack.common.firebase.realtime.CommonDatabase
 import com.huutri.sixpack.ui.fragment.OneDayFragment
 import kotlinx.android.synthetic.main.activity_video_animation.*
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
+import java.lang.Exception
 
 
 class VideoAnimationActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener {
@@ -30,17 +30,38 @@ class VideoAnimationActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitialize
         player: YouTubePlayer?,
         wasRestored: Boolean
     ) {
-        if (!wasRestored) {
-            player?.loadVideo(
-                getIDYoutube(
-                    OneDayFragment.arrExercise_Move?.listMove?.get(
-                        mPos!!
-                    )?.LINK_VIDEO_MOVE!!.trim()
-                ), 0
-            )
-        }
-        mplayer=player
+        mFirebaseInstance=CommonDatabase.mfirebaseDatabase
+        if(mFirebaseInstance==null)mFirebaseInstance= FirebaseDatabase.getInstance()
+        // get reference to 'AllVideo' node
+        mFirebaseDatabase = mFirebaseInstance?.getReference("AllVideo")?.child( OneDayFragment.arrExercise_Move?.listMove?.get(mPos!!)?.LINK_IMAGE_MOVE!!.trim())
+        mFirebaseDatabase?.addListenerForSingleValueEvent(object : ValueEventListener{
+            override fun onCancelled(p0: DatabaseError) {
+
+                Toast.makeText(applicationContext, "Link error", Toast.LENGTH_LONG).show()
+
+            }
+
+            override fun onDataChange(p0: DataSnapshot) { // if have link
+                try {
+                    if (!wasRestored) {                // run video
+                        player?.loadVideo(
+                            getIDYoutube(p0.getValue() as String), 0
+                        )
+                    }
+                    mplayer=player
+                }catch (ex:Exception){}
+
+            }
+
+
+        })
+
+
+
+
     }
+    private var mFirebaseInstance: FirebaseDatabase? = null
+    private var mFirebaseDatabase: DatabaseReference? = null
 
     override fun onInitializationFailure(
         p0: YouTubePlayer.Provider?,

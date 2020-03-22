@@ -9,9 +9,11 @@ import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
+import com.google.firebase.database.FirebaseDatabase
 import com.huutri.sixpack.R
 import com.huutri.sixpack.common.Ads.CommonAds
 import com.huutri.sixpack.common.Ads.CommonAds.Companion.mInterstitialAd
+import com.huutri.sixpack.common.firebase.realtime.CommonDatabase
 import kotlinx.android.synthetic.main.activity_splash.*
 import java.lang.Exception
 
@@ -54,6 +56,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         try {
             MobileAds.initialize(this) {}
+            CommonDatabase.mfirebaseDatabase= FirebaseDatabase.getInstance()
          //   val adRequest = AdRequest.Builder().build()
         //    banner.loadAd(adRequest) // add banner admob
           CommonAds().loadAdsFulL(this)
