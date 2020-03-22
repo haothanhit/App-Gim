@@ -112,7 +112,7 @@
          <Button
              android:id="@+id/btnStart"
              android:layout_width="match_parent"
-             android:layout_height="wrap_content"
+             android:layout_height="@dimen/dimen50dp"
              android:layout_margin="@dimen/dimen10dp"
              android:background="@drawable/bg_btn_radius_24dp"
              android:text="@string/start"
@@ -133,7 +133,7 @@
                 android:id="@+id/btnReStart"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/dimen50dp"
                 android:layout_margin="@dimen/dimen10dp"
                 android:background="@drawable/bg_btn_restart"
                 android:text="@string/restart"
@@ -144,7 +144,7 @@
             <LinearLayout
                 android:layout_margin="@dimen/dimen10dp"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="@dimen/dimen50dp"
                 android:orientation="vertical"
                 android:background="@drawable/bg_btn_radius_24dp"
                 android:id="@+id/btnContinue"
