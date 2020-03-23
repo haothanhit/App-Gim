@@ -16,7 +16,7 @@ import java.lang.Exception
 
 
 class VideoAnimationActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener {
-    var keyYoutube = "AIzaSyC-z8iQpW_wyuj_ZHRr3QpBbK7B-yWCRb0"
+    var keyYoutube = "AIzaSyDF8Gb59Fu7SacGYfFSqrt8Dc-aSebqz1o"
 
     companion object {
         var mPos: Int = 0
