@@ -225,7 +225,9 @@ class RunFragment : BaseFragment() {
 
     lateinit var yourCountDownTimer: CountDownTimerWithPause
     override fun onPause() {
-        yourCountDownTimer.pause()
+        try {
+            yourCountDownTimer.pause()
+        }catch (ex:Exception){}
         Glide.with(context!!).load(R.drawable.ic_pause_run).into(ivFinish)
         super.onPause()
     }
