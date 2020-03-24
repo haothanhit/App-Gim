@@ -130,14 +130,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_alignParentBottom="true"
+        android:layout_above="@id/adView"
         android:layout_marginLeft="@dimen/dimen10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="@dimen/dimen5dp"
         android:layout_marginRight="@dimen/dimen10dp"
-        android:layout_marginBottom="@dimen/dimen25dp"
+        android:layout_marginBottom="@dimen/dimen10dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -174,4 +174,14 @@
             android:layout_marginLeft="@dimen/dimen50dp"
             />
     </LinearLayout>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="@string/ad_banner_id">
+    </com.google.android.gms.ads.AdView>
 </RelativeLayout>

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
 import com.huutri.sixpack.R
 import com.huutri.sixpack.common.Ads.CommonAds
 import com.huutri.sixpack.common.base.BaseActivity
@@ -43,6 +44,17 @@ class RunFragment : BaseFragment() {
     }
 
     private fun initView() {
+        //ads banner
+        //ads
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+        adView.adListener = object : AdListener() {
+            override fun onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+                adView.visibility = View.VISIBLE
+            }
+        }
+
         ivBack.setOnClickListener {
             CommonAds.countShowAdFull++
             if (CommonAds.countShowAdFull == 5) {
